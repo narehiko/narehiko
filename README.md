@@ -8,7 +8,3 @@
 23-year-old Informatics Engineering student based in Tangerang, Indonesia. 
 I spend most of my time coding and playing osu!.
 ```
-
-<p align="center">
-  <img src="./assets/you.gif" alt="pointing at you" width="220" />
-</p>0
