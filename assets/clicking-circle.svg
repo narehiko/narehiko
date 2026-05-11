@@ -1,0 +1,313 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="osu standard five circle jump pattern banner">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="48%" r="78%">
+      <stop offset="0" stop-color="#1a1730"/>
+      <stop offset="0.56" stop-color="#0c1020"/>
+      <stop offset="1" stop-color="#05070d"/>
+    </radialGradient>
+
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ff9bd4"/>
+      <stop offset="1" stop-color="#ff4fa8"/>
+    </linearGradient>
+
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#b8fbff"/>
+      <stop offset="1" stop-color="#4fd7ff"/>
+    </linearGradient>
+
+    <filter id="circleGlow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.96  0 1 0 0 0.38  0 0 1 0 0.76  0 0 0 0.8 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="cursorGlow" x="-90%" y="-90%" width="280%" height="280%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.50  0 0 0 0 0.92  0 0 0 0 1.00  0 0 0 0.95 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .number {
+        font: 800 33px Arial, sans-serif;
+        fill: #fff;
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+
+      .hit {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      .object {
+        opacity: 0;
+      }
+
+      .obj1 { animation: object1 5s linear infinite; }
+      .obj2 { animation: object2 5s linear infinite; }
+      .obj3 { animation: object3 5s linear infinite; }
+      .obj4 { animation: object4 5s linear infinite; }
+      .obj5 { animation: object5 5s linear infinite; }
+
+      .approach {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      .h1 { animation: hit1 5s linear infinite; }
+      .h2 { animation: hit2 5s linear infinite; }
+      .h3 { animation: hit3 5s linear infinite; }
+      .h4 { animation: hit4 5s linear infinite; }
+      .h5 { animation: hit5 5s linear infinite; }
+
+      .a1 { animation: approach1 5s linear infinite; }
+      .a2 { animation: approach2 5s linear infinite; }
+      .a3 { animation: approach3 5s linear infinite; }
+      .a4 { animation: approach4 5s linear infinite; }
+      .a5 { animation: approach5 5s linear infinite; }
+
+      .cursor {
+        animation: cursorOpacity 5s linear infinite;
+      }
+
+      .trail {
+        fill: #8ff4ff;
+        filter: url(#cursorGlow);
+        opacity: 0;
+      }
+
+      .t1 { animation: trailOpacity1 5s linear infinite; }
+      .t2 { animation: trailOpacity2 5s linear infinite; }
+      .t3 { animation: trailOpacity3 5s linear infinite; }
+      .t4 { animation: trailOpacity4 5s linear infinite; }
+
+      @keyframes object1 {
+        0%, 13% { opacity: 1; }
+        14%, 100% { opacity: 0; }
+      }
+
+      @keyframes object2 {
+        0%, 13% { opacity: 0; }
+        16% { opacity: 1; }
+        31% { opacity: 1; }
+        32%, 100% { opacity: 0; }
+      }
+
+      @keyframes object3 {
+        0%, 31% { opacity: 0; }
+        34% { opacity: 1; }
+        49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+
+      @keyframes object4 {
+        0%, 49% { opacity: 0; }
+        52% { opacity: 1; }
+        67% { opacity: 1; }
+        68%, 100% { opacity: 0; }
+      }
+
+      @keyframes object5 {
+        0%, 67% { opacity: 0; }
+        70% { opacity: 1; }
+        85% { opacity: 1; }
+        86%, 100% { opacity: 0; }
+      }
+
+      @keyframes approach1 {
+        0% { transform: scale(1.55); opacity: 0; }
+        2% { transform: scale(1.32); opacity: .48; }
+        9.8% { transform: scale(.63); opacity: .5; }
+        10% { transform: scale(.606); opacity: .62; }
+        10.7%, 96% { transform: scale(.606); opacity: 0; }
+        100% { transform: scale(1.55); opacity: 0; }
+      }
+
+      @keyframes approach2 {
+        0%, 14% { transform: scale(1.55); opacity: 0; }
+        16% { transform: scale(1.32); opacity: .48; }
+        27.8% { transform: scale(.624); opacity: .5; }
+        28% { transform: scale(.6); opacity: .62; }
+        28.7%, 100% { transform: scale(.6); opacity: 0; }
+      }
+
+      @keyframes approach3 {
+        0%, 32% { transform: scale(1.55); opacity: 0; }
+        34% { transform: scale(1.32); opacity: .48; }
+        45.8% { transform: scale(.63); opacity: .5; }
+        46% { transform: scale(.606); opacity: .62; }
+        46.7%, 100% { transform: scale(.606); opacity: 0; }
+      }
+
+      @keyframes approach4 {
+        0%, 50% { transform: scale(1.55); opacity: 0; }
+        52% { transform: scale(1.32); opacity: .48; }
+        63.8% { transform: scale(.624); opacity: .5; }
+        64% { transform: scale(.6); opacity: .62; }
+        64.7%, 100% { transform: scale(.6); opacity: 0; }
+      }
+
+      @keyframes approach5 {
+        0%, 68% { transform: scale(1.55); opacity: 0; }
+        70% { transform: scale(1.32); opacity: .48; }
+        81.8% { transform: scale(.63); opacity: .5; }
+        82% { transform: scale(.606); opacity: .62; }
+        82.7%, 100% { transform: scale(.606); opacity: 0; }
+      }
+
+      @keyframes hit1 {
+        0%, 9.5%, 13%, 100% { transform: scale(1); }
+        10% { transform: scale(.9); }
+        11% { transform: scale(1.06); }
+      }
+
+      @keyframes hit2 {
+        0%, 27.5%, 31%, 100% { transform: scale(1); }
+        28% { transform: scale(.9); }
+        29% { transform: scale(1.06); }
+      }
+
+      @keyframes hit3 {
+        0%, 45.5%, 49%, 100% { transform: scale(1); }
+        46% { transform: scale(.9); }
+        47% { transform: scale(1.06); }
+      }
+
+      @keyframes hit4 {
+        0%, 63.5%, 67%, 100% { transform: scale(1); }
+        64% { transform: scale(.9); }
+        65% { transform: scale(1.06); }
+      }
+
+      @keyframes hit5 {
+        0%, 81.5%, 85%, 100% { transform: scale(1); }
+        82% { transform: scale(.9); }
+        83% { transform: scale(1.06); }
+      }
+
+      @keyframes cursorOpacity {
+        0% { opacity: 0; }
+        2%, 88% { opacity: 1; }
+        90%, 100% { opacity: 0; }
+      }
+
+      @keyframes trailOpacity1 {
+        0% { opacity: 0; }
+        4%, 82% { opacity: .16; }
+        90%, 100% { opacity: 0; }
+      }
+
+      @keyframes trailOpacity2 {
+        0% { opacity: 0; }
+        6%, 82% { opacity: .1; }
+        90%, 100% { opacity: 0; }
+      }
+
+      @keyframes trailOpacity3 {
+        0% { opacity: 0; }
+        8%, 82% { opacity: .06; }
+        90%, 100% { opacity: 0; }
+      }
+
+      @keyframes trailOpacity4 {
+        0% { opacity: 0; }
+        10%, 82% { opacity: .035; }
+        90%, 100% { opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#bg)"/>
+
+  <g filter="url(#circleGlow)">
+    <g class="object obj1">
+      <g class="hit h1">
+        <circle cx="125" cy="308" r="43" fill="url(#pink)"/>
+        <circle cx="125" cy="308" r="43" fill="none" stroke="#fff" stroke-width="5"/>
+        <circle class="approach a1" cx="125" cy="308" r="71" fill="none" stroke="#fff" stroke-width="3" opacity=".4"/>
+        <text class="number" x="125" y="310">1</text>
+      </g>
+    </g>
+
+    <g class="object obj2">
+      <g class="hit h2">
+        <circle cx="355" cy="86" r="42" fill="url(#cyan)"/>
+        <circle cx="355" cy="86" r="42" fill="none" stroke="#fff" stroke-width="5"/>
+        <circle class="approach a2" cx="355" cy="86" r="70" fill="none" stroke="#fff" stroke-width="3" opacity=".4"/>
+        <text class="number" x="355" y="88">2</text>
+      </g>
+    </g>
+
+    <g class="object obj3">
+      <g class="hit h3">
+        <circle cx="585" cy="318" r="43" fill="url(#pink)"/>
+        <circle cx="585" cy="318" r="43" fill="none" stroke="#fff" stroke-width="5"/>
+        <circle class="approach a3" cx="585" cy="318" r="71" fill="none" stroke="#fff" stroke-width="3" opacity=".4"/>
+        <text class="number" x="585" y="320">3</text>
+      </g>
+    </g>
+
+    <g class="object obj4">
+      <g class="hit h4">
+        <circle cx="815" cy="92" r="42" fill="url(#cyan)"/>
+        <circle cx="815" cy="92" r="42" fill="none" stroke="#fff" stroke-width="5"/>
+        <circle class="approach a4" cx="815" cy="92" r="70" fill="none" stroke="#fff" stroke-width="3" opacity=".4"/>
+        <text class="number" x="815" y="94">4</text>
+      </g>
+    </g>
+
+    <g class="object obj5">
+      <g class="hit h5">
+        <circle cx="1062" cy="300" r="43" fill="url(#pink)"/>
+        <circle cx="1062" cy="300" r="43" fill="none" stroke="#fff" stroke-width="5"/>
+        <circle class="approach a5" cx="1062" cy="300" r="71" fill="none" stroke="#fff" stroke-width="3" opacity=".4"/>
+        <text class="number" x="1062" y="302">5</text>
+      </g>
+    </g>
+  </g>
+
+  <g>
+    <circle class="trail t4" r="5">
+      <animateMotion dur="5s" repeatCount="indefinite" calcMode="linear"
+        keyTimes="0;0.1;0.28;0.46;0.64;0.82;0.9;0.96;1"
+        keyPoints="0;0.053817;0.24558;0.438471;0.631067;0.821595;0.94;0;0"
+        path="M-35 210 C10 205 70 250 125 308 C155 235 238 150 355 86 C410 125 492 238 585 318 C615 245 725 145 815 92 C872 130 982 236 1062 300 C1125 308 1190 250 1235 210"/>
+    </circle>
+    <circle class="trail t3" r="7">
+      <animateMotion dur="5s" repeatCount="indefinite" calcMode="linear"
+        keyTimes="0;0.1;0.28;0.46;0.64;0.82;0.9;0.96;1"
+        keyPoints="0;0.068817;0.26058;0.453471;0.646067;0.836595;0.955;0;0"
+        path="M-35 210 C10 205 70 250 125 308 C155 235 238 150 355 86 C410 125 492 238 585 318 C615 245 725 145 815 92 C872 130 982 236 1062 300 C1125 308 1190 250 1235 210"/>
+    </circle>
+    <circle class="trail t2" r="9">
+      <animateMotion dur="5s" repeatCount="indefinite" calcMode="linear"
+        keyTimes="0;0.1;0.28;0.46;0.64;0.82;0.9;0.96;1"
+        keyPoints="0;0.083817;0.27558;0.468471;0.661067;0.851595;0.97;0;0"
+        path="M-35 210 C10 205 70 250 125 308 C155 235 238 150 355 86 C410 125 492 238 585 318 C615 245 725 145 815 92 C872 130 982 236 1062 300 C1125 308 1190 250 1235 210"/>
+    </circle>
+    <circle class="trail t1" r="11">
+      <animateMotion dur="5s" repeatCount="indefinite" calcMode="linear"
+        keyTimes="0;0.1;0.28;0.46;0.64;0.82;0.9;0.96;1"
+        keyPoints="0;0.098817;0.29058;0.483471;0.676067;0.866595;0.985;0;0"
+        path="M-35 210 C10 205 70 250 125 308 C155 235 238 150 355 86 C410 125 492 238 585 318 C615 245 725 145 815 92 C872 130 982 236 1062 300 C1125 308 1190 250 1235 210"/>
+    </circle>
+  </g>
+
+  <g class="cursor" filter="url(#cursorGlow)">
+    <animateMotion dur="5s" repeatCount="indefinite" calcMode="linear"
+      keyTimes="0;0.1;0.28;0.46;0.64;0.82;0.9;0.96;1"
+      keyPoints="0;0.113817;0.30558;0.498471;0.691067;0.881595;1;0;0"
+      path="M-35 210 C10 205 70 250 125 308 C155 235 238 150 355 86 C410 125 492 238 585 318 C615 245 725 145 815 92 C872 130 982 236 1062 300 C1125 308 1190 250 1235 210"/>
+    <circle cx="0" cy="0" r="19" fill="#fff" opacity=".18"/>
+    <circle cx="0" cy="0" r="9" fill="#fff"/>
+    <circle cx="0" cy="0" r="4" fill="#4fd7ff"/>
+  </g>
+</svg>
