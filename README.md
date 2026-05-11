@@ -11,4 +11,4 @@ I spend most of my time coding and playing osu!.
 
 <p align="center">
   <img src="./assets/you.gif" alt="pointing at you" width="220" />
-</p>
+</p>0
