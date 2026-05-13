@@ -7,4 +7,6 @@
 ```txt
 23-year-old Informatics Engineering student based in Tangerang, Indonesia. 
 I spend most of my time coding and playing osu!.
+
+Nice to meet you!
 ```
